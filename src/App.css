@@ -1,0 +1,1658 @@
+/* =========================================================
+   NAVRATRI DATE WEBSITE
+   APP.CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  background: #fffaf3;
+  color: #19152d;
+}
+
+button {
+  font-family: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #090923 0%,
+      #151239 35%,
+      #3f284d 68%,
+      #a9573e 86%,
+      #df8b46 100%
+    );
+}
+
+
+/* =========================================================
+   STAR BACKGROUND
+========================================================= */
+
+.stars {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background-image:
+
+    radial-gradient(
+      circle at 8% 10%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 19% 24%,
+      #f4bd61 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 32% 8%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 44% 18%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 59% 10%,
+      #f4bd61 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 72% 20%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 87% 9%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 94% 29%,
+      #f4bd61 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 12% 42%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 35% 35%,
+      #f4bd61 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 62% 31%,
+      #ffffff 0 1px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 82% 40%,
+      #ffffff 0 1px,
+      transparent 2px
+    );
+
+  opacity: 0.75;
+
+  animation:
+    starsPulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes starsPulse {
+
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MOON
+========================================================= */
+
+.moon {
+  position: absolute;
+
+  top: 85px;
+  right: 8%;
+
+  width: 48px;
+  height: 48px;
+
+  z-index: 5;
+
+  border-radius: 50%;
+
+  background: #f4ad5c;
+
+  box-shadow:
+    0 0 35px rgba(244, 173, 92, 0.25);
+}
+
+.moon::after {
+  content: "";
+
+  position: absolute;
+
+  top: -4px;
+  left: 14px;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  background: #12102f;
+}
+
+
+/* =========================================================
+   FULLSCREEN VIDEO
+========================================================= */
+
+.garba-visual {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+/* VIDEO */
+
+.garba-video {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  transform:
+    translate(-50%, -50%);
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  z-index: 1;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.visual-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 8, 30, 0.48) 0%,
+      rgba(8, 8, 30, 0.18) 32%,
+      rgba(8, 8, 30, 0.04) 58%,
+      rgba(8, 8, 30, 0.30) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: absolute;
+
+  top: 7%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  width: min(760px, calc(100% - 40px));
+
+  padding: 0;
+
+  text-align: center;
+}
+
+
+/* Eyebrow */
+
+.eyebrow {
+  margin-bottom: 18px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.28em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* Hero heading */
+
+.hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(46px, 8vw, 84px);
+
+  font-weight: 500;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+
+  text-shadow:
+    0 3px 30px rgba(0,0,0,0.25);
+}
+
+
+/* Hero paragraph */
+
+.hero-content > p {
+  max-width:
+    530px;
+
+  margin:
+    25px auto 0;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+
+  text-shadow:
+    0 2px 15px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   BUTTON SYSTEM
+========================================================= */
+
+.button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding:
+    14px 24px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.button:hover {
+  transform:
+    translateY(-3px);
+}
+
+.button:active {
+  transform:
+    scale(0.97);
+}
+
+.button:focus-visible {
+  outline:
+    2px solid #ffffff;
+
+  outline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  flex-wrap:
+    wrap;
+
+  margin-top:
+    30px;
+}
+
+
+/* Yes */
+
+.button-primary {
+  background:
+    #ffffff;
+
+  color:
+    #681a3b;
+
+  font-weight:
+    700;
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.20);
+}
+
+
+/* Let me think */
+
+.button-outline {
+  background:
+    rgba(255,255,255,0.08);
+
+  color:
+    #ffffff;
+
+  border:
+    1px solid rgba(255,255,255,0.28);
+
+  backdrop-filter:
+    blur(10px);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    18px;
+
+  z-index:
+    8;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(255,255,255,0.65);
+
+  font-size:
+    9px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.22em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+  opacity:
+    0;
+
+  transform:
+    translateY(35px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   COMMON CONTENT
+========================================================= */
+
+.content-width {
+  width:
+    min(960px, calc(100% - 40px));
+
+  margin:
+    0 auto;
+}
+
+
+/* Section label */
+
+.section-label {
+  display:
+    block;
+
+  margin-bottom:
+    14px;
+
+  color:
+    #9a765f;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.24em;
+
+  text-transform:
+    uppercase;
+}
+
+.section-label.light {
+  color:
+    #dcb87b;
+}
+
+
+/* Description */
+
+.section-description {
+  max-width:
+    590px;
+
+  margin:
+    0;
+
+  color:
+    #756d7f;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.75;
+}
+
+.light-text {
+  color:
+    rgba(255,255,255,0.66);
+}
+
+
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+
+.intro-section {
+  padding:
+    115px 20px 90px;
+
+  background:
+    #fffaf3;
+}
+
+.intro-section h2 {
+  margin:
+    0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(38px, 6vw, 62px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.04;
+
+  letter-spacing:
+    -0.045em;
+}
+
+
+/* =========================================================
+   BENEFITS SECTION
+========================================================= */
+
+.benefits-section {
+  padding:
+    100px 20px;
+
+  background:
+    #f7eee4;
+}
+
+
+/* Heading */
+
+.section-heading h2 {
+  margin:
+    0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(38px, 6vw, 62px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.04;
+
+  letter-spacing:
+    -0.045em;
+}
+
+
+/* Grid */
+
+.benefits-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    14px;
+
+  margin-top:
+    45px;
+}
+
+
+/* Card */
+
+.benefit-card {
+  min-width:
+    0;
+
+  min-height:
+    225px;
+
+  padding:
+    27px;
+
+  border:
+    1px solid rgba(25,20,43,0.08);
+
+  border-radius:
+    25px;
+
+  background:
+    rgba(255,255,255,0.58);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.benefit-card:hover {
+  transform:
+    translateY(-7px);
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(70,40,20,0.08);
+}
+
+
+/* Card top */
+
+.benefit-top {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+}
+
+.benefit-number {
+  color:
+    #a76b42;
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    0.08em;
+}
+
+.benefit-icon {
+  font-size:
+    22px;
+}
+
+
+/* Card heading */
+
+.benefit-card h3 {
+  margin:
+    27px 0 9px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    27px;
+
+  font-weight:
+    500;
+}
+
+
+/* Card paragraph */
+
+.benefit-card p {
+  margin:
+    0;
+
+  color:
+    #756d7f;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   PLAN SECTION
+========================================================= */
+
+.plan-section {
+  padding:
+    105px 20px;
+
+  background:
+    #171334;
+
+  color:
+    #ffffff;
+}
+
+.plan-section h2 {
+  margin:
+    0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(38px, 6vw, 62px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.04;
+
+  letter-spacing:
+    -0.045em;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  margin-top:
+    45px;
+
+  border:
+    1px solid rgba(255,255,255,0.14);
+
+  border-radius:
+    25px;
+
+  overflow:
+    hidden;
+
+  background:
+    rgba(255,255,255,0.02);
+}
+
+.timeline-item {
+  min-width:
+    0;
+
+  min-height:
+    190px;
+
+  padding:
+    26px 21px;
+
+  border-right:
+    1px solid rgba(255,255,255,0.14);
+}
+
+.timeline-item:last-child {
+  border-right:
+    none;
+}
+
+.timeline-number {
+  color:
+    #dcb87b;
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.14em;
+}
+
+.timeline-item h3 {
+  margin:
+    18px 0 9px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    25px;
+
+  font-weight:
+    500;
+}
+
+.timeline-item p {
+  margin:
+    0;
+
+  color:
+    rgba(255,255,255,0.58);
+
+  font-size:
+    12px;
+
+  line-height:
+    1.65;
+}
+
+
+/* =========================================================
+   CUTE SECTION
+========================================================= */
+
+.cute-section {
+  padding:
+    105px 20px;
+
+  background:
+    #fffaf3;
+}
+
+
+/* Card */
+
+.cute-card {
+  position:
+    relative;
+
+  width:
+    min(700px, 100%);
+
+  margin:
+    0 auto;
+
+  padding:
+    72px 30px;
+
+  text-align:
+    center;
+
+  border:
+    1px solid rgba(109,24,60,0.08);
+
+  border-radius:
+    32px;
+
+  background:
+    #f8eee4;
+}
+
+
+/* Decoration */
+
+.cute-decoration {
+  position:
+    absolute;
+
+  top:
+    25px;
+
+  right:
+    30px;
+
+  color:
+    #d87532;
+
+  font-size:
+    24px;
+
+  animation:
+    spinStar 5s linear infinite;
+}
+
+@keyframes spinStar {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+/* Cute heading */
+
+.cute-card h2 {
+  margin:
+    0 0 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(38px, 6vw, 58px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.05;
+
+  letter-spacing:
+    -0.04em;
+
+  color:
+    #571b17;
+}
+
+
+/* Cute paragraph */
+
+.cute-card p {
+  max-width:
+    440px;
+
+  margin:
+    0 auto;
+
+  color:
+    #756d7f;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+}
+
+
+/* Heart */
+
+.cute-heart {
+  margin-top:
+    27px;
+
+  color:
+    #8e2424;
+
+  font-size:
+    30px;
+
+  animation:
+    heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform:
+      scale(1);
+  }
+
+  50% {
+    transform:
+      scale(1.16);
+  }
+}
+
+
+/* =========================================================
+   FINAL QUESTION
+========================================================= */
+
+.final-section {
+  padding:
+    125px 20px;
+
+  text-align:
+    center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf3 0%,
+      #f5e8dc 100%
+    );
+}
+
+.final-content {
+  width:
+    min(700px, 100%);
+
+  margin:
+    0 auto;
+}
+
+
+/* Final heading */
+
+.final-section h2 {
+  margin:
+    0 0 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(42px, 7vw, 70px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.02;
+
+  letter-spacing:
+    -0.045em;
+
+  color:
+    #571b17;
+}
+
+
+/* Final paragraph */
+
+.final-section > .final-content > p {
+  max-width:
+    520px;
+
+  margin:
+    0 auto;
+
+  color:
+    #756d7f;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.7;
+}
+
+
+/* Final buttons */
+
+.final-buttons {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  flex-wrap:
+    wrap;
+
+  margin-top:
+    30px;
+}
+
+
+/* YES */
+
+.final-yes {
+  appearance:
+    none;
+
+  background:
+    #6d183c;
+
+  color:
+    #ffffff;
+
+  font-weight:
+    700;
+
+  box-shadow:
+    0 14px 32px rgba(109,24,60,0.22);
+}
+
+
+/* NO */
+
+.final-no {
+  appearance:
+    none;
+
+  background:
+    #eadfd5;
+
+  color:
+    #614b44;
+
+  font-weight:
+    600;
+}
+
+
+/* No response */
+
+.no-response {
+  min-height:
+    20px;
+
+  margin:
+    17px 0 0 !important;
+
+  color:
+    #a7653c !important;
+
+  font-size:
+    12px !important;
+}
+
+
+/* =========================================================
+   SUCCESS OVERLAY
+========================================================= */
+
+.success-overlay {
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    1000;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    24px;
+
+  background:
+    rgba(15,10,30,0.94);
+
+  backdrop-filter:
+    blur(14px);
+
+  animation:
+    fadeIn 0.35s ease;
+}
+
+
+/* Success content */
+
+.success-content {
+  text-align:
+    center;
+
+  color:
+    #ffffff;
+
+  animation:
+    successIn 0.65s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* Icon */
+
+.success-icon {
+  margin-bottom:
+    20px;
+
+  font-size:
+    68px;
+}
+
+
+/* Small label */
+
+.success-content > span {
+  color:
+    #e4b46d;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.3em;
+}
+
+
+/* Heading */
+
+.success-content h2 {
+  margin:
+    15px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(45px, 8vw, 72px);
+
+  font-weight:
+    500;
+}
+
+
+/* Paragraph */
+
+.success-content p {
+  margin-top:
+    15px;
+
+  color:
+    rgba(255,255,255,0.58);
+
+  font-size:
+    13px;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+
+  from {
+    opacity:
+      0;
+  }
+
+  to {
+    opacity:
+      1;
+  }
+}
+
+@keyframes successIn {
+
+  from {
+    opacity:
+      0;
+
+    transform:
+      scale(0.86)
+      translateY(20px);
+  }
+
+  to {
+    opacity:
+      1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+.confetti {
+  position:
+    fixed;
+
+  z-index:
+    2000;
+
+  pointer-events:
+    none;
+
+  color:
+    #e5a64e;
+
+  animation:
+    confettiFall 2.5s ease-out forwards;
+}
+
+@keyframes confettiFall {
+
+  0% {
+    opacity:
+      1;
+
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  100% {
+    opacity:
+      0;
+
+    transform:
+      translateY(70vh)
+      rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding:
+    30px 20px;
+
+  text-align:
+    center;
+
+  background:
+    #fffaf3;
+
+  border-top:
+    1px solid rgba(25,20,43,0.08);
+
+  color:
+    #9a8e8b;
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.16em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .benefits-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-item:nth-child(2) {
+    border-right:
+      none;
+  }
+
+  .timeline-item:nth-child(3),
+  .timeline-item:nth-child(4) {
+    border-top:
+      1px solid rgba(255,255,255,0.14);
+  }
+
+  .timeline-item:nth-child(3) {
+    border-right:
+      1px solid rgba(255,255,255,0.14);
+  }
+
+  .timeline-item:nth-child(4) {
+    border-right:
+      none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    position: absolute;
+
+    top: 6%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width:
+      calc(100% - 36px);
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+
+    line-height: 0.98;
+  }
+
+  .hero-content > p {
+    max-width: 340px;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 22px;
+  }
+
+  .hero-buttons .button {
+    width: 210px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-content {
+    padding-top:
+      58px;
+  }
+
+  .hero h1 {
+    font-size:
+      39px;
+  }
+
+  .hero-content > p {
+    font-size:
+      12px;
+  }
+
+  .hero-buttons .button {
+    width:
+      200px;
+  }
+
+  .intro-section h2,
+  .section-heading h2,
+  .plan-section h2 {
+    font-size:
+      38px;
+  }
+
+  .cute-card h2 {
+    font-size:
+      37px;
+  }
+
+  .final-section h2 {
+    font-size:
+      39px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+}
